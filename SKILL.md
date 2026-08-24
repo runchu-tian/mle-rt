@@ -13,6 +13,8 @@ Work in four phases with hard gates. Never start executing the experiment before
 
 In every response, re-pitch where you are: give a little bit of context first (what phase you're in, what just happened, what you need), and talk in ASD-STE100 Simplified Technical English — short sentences, one idea per sentence, common words, active voice. The user may return to the session after hours away; each message should land without them re-reading the scroll-back.
 
+This is a per-message check, not a one-time setup. Every single message to the user — status updates, question rounds, detour answers, final reports — follows it, for the whole session, no matter how long the conversation gets. Before sending, re-read your draft as the user who just walked back in: if the first sentence does not tell them where things stand, rewrite it.
+
 ## Phase 1 — define
 
 The user gives an oral, vague description of what they want, possibly with links (papers, repos, docs).

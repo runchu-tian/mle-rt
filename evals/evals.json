@@ -1,0 +1,49 @@
+{
+  "skill_name": "mle-rt",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "vague-rl-comparison",
+      "prompt": "I want to run a quick experiment comparing GRPO and PPO for finetuning a small LLM on GSM8K math problems. We have a server with 8 A100s. Maybe use the TRL library (https://github.com/huggingface/trl). Set this up for me \u2014 put the project folder at {PROJECT_DIR}.",
+      "expected_output": "A project folder containing a raw plan.md with goal, links, candidate configs, deliverables, and an explicit open-questions section; then a round of numbered grilling questions with recommended answers written to the user. No training runs started.",
+      "files": [],
+      "assertions": [
+        "A plan file (plan.md or similar) exists in the project folder",
+        "The plan file contains an explicit open-questions/uncertainties section",
+        "The plan file is self-contained: states goal, the TRL link, candidate configs, and deliverables",
+        "The message to the user contains numbered questions, each paired with a recommended answer",
+        "No training or experiment execution was started; the agent stopped at a user gate"
+      ]
+    },
+    {
+      "id": 1,
+      "eval_name": "paper-replication",
+      "prompt": "help me reproduce the rank ablation from the LoRA paper (https://arxiv.org/abs/2106.09685) but on qwen2.5-0.5b instead, i mainly care about whether rank 4 is enough for our internal classification task. the data is not prepared yet, i think we have some jsonl somewhere. put the project at {PROJECT_DIR}",
+      "expected_output": "A project folder with a raw plan.md that cites the paper, adapts the ablation to the new model, marks the missing dataset as an open question the agent tried to resolve itself first, and a grilling round for the remaining user decisions.",
+      "files": [],
+      "assertions": [
+        "A plan file exists and cites the LoRA paper link",
+        "The plan adapts the ablation to qwen2.5-0.5b rather than copying the paper setup blindly",
+        "The agent attempted to locate the jsonl dataset itself (searched the filesystem) instead of only asking the user where it is",
+        "The message to the user contains numbered questions, each paired with a recommended answer",
+        "No training or experiment execution was started; the agent stopped at a user gate"
+      ]
+    },
+    {
+      "id": 2,
+      "eval_name": "resume-mid-refine",
+      "prompt": "continue the experiment in {PROJECT_DIR}",
+      "expected_output": "The agent reads the existing plan.md, states the task is mid-refine (Phase 2), resolves the fact-type open questions itself (dataset location, GPU memory) or documents the attempt, asks the user-decision questions in grilling format, and does NOT start the sweep.",
+      "files": [
+        "inputs/resume-project/plan.md"
+      ],
+      "assertions": [
+        "The agent read the existing plan.md and correctly identified the task as mid-refinement (not done, not un-started)",
+        "Fact-type open questions (dataset location, batch-size/memory) were investigated by the agent itself, or the attempt was documented",
+        "The user-judgment question (commit checkpoint to git LFS or reference by path) was asked to the user, not decided unilaterally",
+        "The 12-run sweep was NOT executed and no results were fabricated",
+        "plan.md was updated in place with any new findings"
+      ]
+    }
+  ]
+}

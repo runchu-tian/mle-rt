@@ -11,7 +11,7 @@ A [Claude Code skill](https://code.claude.com/docs/en/skills) that runs an ML/re
 
 `plan.md` and `report.md` are self-contained by design: a new agent (or human) with zero chat history can understand, replicate, and reuse the project from those files alone. Interruptions are detours, not cancellations — the phase lives in the plan file.
 
-Responses follow a re-pitch style (brief context first, ASD-STE100 Simplified Technical English), adapted from mattpocock's [wait-what](https://github.com/mattpocock/skills); the questioning protocol is adapted from his [grilling](https://github.com/mattpocock/skills) skill.
+Responses follow a re-pitch style (brief context first, ASD-STE100 Simplified Technical English), adapted from mattpocock's [wait-what](https://github.com/mattpocock/skills/blob/main/skills/productivity/wait-what/SKILL.md); the questioning protocol is adapted from his [grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md) skill.
 
 ## Install
 

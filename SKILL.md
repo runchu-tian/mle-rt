@@ -72,3 +72,7 @@ Real conversations do not follow the phases strictly. The user will interrupt wi
 When the user asks "what's next" (or seems lost), re-derive the phase from the plan file and answer with: the current phase, what is settled, what is still open, and what the next gate is. If a detour produced something that changes the plan (a new fact, a changed config), fold it into the plan file before moving on.
 
 If invoked in a project folder that already has a plan file (new session, no chat history), same rule: read the file, state which phase the task is in, and continue from there. The files are the source of truth, not your memory of the conversation.
+
+## Credits
+
+Two parts of this skill are adapted from [mattpocock/skills](https://github.com/mattpocock/skills): the communication style comes from [wait-what](https://github.com/mattpocock/skills/blob/main/skills/productivity/wait-what/SKILL.md) (with the `CONTEXT.md` ubiquitous-language part removed), and the Phase 2 questioning protocol comes from [grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md).

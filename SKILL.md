@@ -1,6 +1,6 @@
 ---
 name: mle-rt
-description: Run an ML/research experiment task from vague idea to verified deliverables, in four gated phases (define → refine → confirm&go → check). Use this whenever the user starts describing a new experiment, research task, training/eval run, or project they want executed — even casually or partially ("I want to try...", "help me run...", "we need an exp that..."), especially when they mention links, papers, or a repo to build on. Also use it to resume such a project: if a project folder with a plan file exists, pick up at the right phase.
+description: Run an ML/research experiment task from vague idea to verified deliverables, in four gated phases (define → refine → confirm&go → check). Use this whenever the user starts describing a new experiment, research task, training/eval run, or project they want executed — even casually or partially ("I want to try...", "help me run...", "we need an exp that..."), especially when they mention links, papers, or a repo to build on. Also use it to resume such a project — if a project folder with a plan file exists, pick up at the right phase.
 ---
 
 # mle-rt — research task workflow

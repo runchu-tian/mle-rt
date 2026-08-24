@@ -43,7 +43,9 @@ Then **grill the user** on everything that remains. Map the task as a design tre
 
 A question whose answer depends on another still-open question belongs to a later round. After each round of answers, recompute the frontier and ask again. When a frontier question needs a fact from the environment, look it up (or dispatch a sub-agent) instead of asking; only its downstream questions wait on that.
 
-Iterate until the frontier is empty: no known blockers, and you and the user agree on configs, deliverables, and success criteria. Fold every settled answer into the plan file as you go — the plan file, not the chat, is where agreements live.
+Refine is not done until the deliverables are **verifiable**. For each deliverable in the plan, attach a concrete check: a file that must exist at a stated path, a command whose output shows the result, a metric with a threshold, a table with named columns. If a deliverable resists this ("clean code", "good results"), grill it into a verifiable form, or record it explicitly as judgment-based so nobody later pretends it was checked. This is what lets Phase 4 be a mechanical checklist instead of an opinion — and lets a handoff agent verify the project without you.
+
+Iterate until the frontier is empty: no known blockers, and you and the user agree on configs, deliverables, and their checks. Fold every settled answer into the plan file as you go — the plan file, not the chat, is where agreements live.
 
 ## Phase 3 — confirm & go
 
@@ -55,7 +57,7 @@ Only when the user says "go" (or an unambiguous equivalent), start executing the
 
 When the experiment finishes:
 
-1. Check each deliverable promised in the plan file against what actually exists. Give honest feedback: what is done, what is partial, what failed and why. Do not round "mostly done" up to "done".
+1. Check each deliverable promised in the plan file against what actually exists, by running the verifiable check agreed for it in refine — not by eyeballing. Give honest feedback: what is done, what is partial, what failed and why. Do not round "mostly done" up to "done".
 2. Write a **report file** (default `report.md`) in the project folder.
 
 ## Rewrite, don't patch

@@ -1,5 +1,7 @@
 # mle-rt
 
+[![skills.sh](https://skills.sh/b/runchu-tian/mle-rt)](https://skills.sh/runchu-tian/mle-rt)
+
 A [Claude Code skill](https://code.claude.com/docs/en/skills) that runs an ML/research experiment task from vague idea to verified deliverables, in four gated phases:
 
 1. **define** — you describe the task orally (links welcome); the agent sets up a git-able project folder and writes a raw `plan.md` with explicit open questions.
@@ -13,13 +15,26 @@ Responses follow a re-pitch style (brief context first, ASD-STE100 Simplified Te
 
 ## Install
 
+Works with Claude Code, Codex, and other agents via [skills.sh](https://skills.sh):
+
+```bash
+npx skills@latest add runchu-tian/mle-rt
+```
+
+Add `-g` to install for all projects instead of just the current one. Update later with `npx skills update`.
+
+<details>
+<summary>Manual install (git clone)</summary>
+
 Personal (all projects):
 
 ```bash
 git clone git@github.com:runchu-tian/mle-rt.git ~/.claude/skills/mle-rt
 ```
 
-Project-scoped: clone into `<project>/.claude/skills/mle-rt` instead.
+Project-scoped: clone into `<project>/.claude/skills/mle-rt` instead. Update with `git pull`.
+
+</details>
 
 ## Use
 

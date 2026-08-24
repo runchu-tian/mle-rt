@@ -58,6 +58,12 @@ When the experiment finishes:
 1. Check each deliverable promised in the plan file against what actually exists. Give honest feedback: what is done, what is partial, what failed and why. Do not round "mostly done" up to "done".
 2. Write a **report file** (default `report.md`) in the project folder.
 
+## Rewrite, don't patch
+
+Every time you modify the plan file — folding in Phase 2 answers, Phase 3 refinements, detour findings — rewrite it as the brand-new current plan: the single final working version. Do not layer patches on top of old plans, keep superseded approaches, strike-through text, or "previously we thought..." history. Delete stale options and settled open questions outright; git preserves old versions, so the file does not have to.
+
+The one thing a dead end leaves behind is a pitfall entry: a short "avoid X because Y" line (keep a `## Pitfalls` section for these) so a handoff agent does not re-walk the dead end. Everything else that no longer serves the current plan is context burden — these files are read whole by future agents, and every stale paragraph dilutes the real plan. The same rule applies to the report file.
+
 ## Self-containedness of plan.md and report.md
 
 Both files must stand alone for a future agent (or human) with zero chat context:

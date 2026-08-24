@@ -7,7 +7,7 @@ description: Run an ML/research experiment task from vague idea to verified deli
 
 Carry a research/ML engineering task from a vague oral description to verified deliverables. The core idea: **all understanding lives in two self-contained files** — a plan file and a report file — so that a brand-new agent with no chat history can open the folder, understand the task, replicate it, and use its results. The conversation is scaffolding; the files are the product.
 
-Work in four phases with hard gates. Never start executing the experiment before the user says "go" in Phase 3.
+Work in four phases with hard gates, and every phase entrance is confirmed by the user: when you believe the current phase is done, say so and ask to move on — you may propose the transition, but never slide into the next phase on your own. This keeps the user in control of pace and gives them a natural checkpoint to redirect before work compounds. The Phase 3 "go" is the strictest of these gates: never start executing the experiment before the user says "go".
 
 ## Communication style (all phases)
 

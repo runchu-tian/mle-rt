@@ -15,6 +15,8 @@ In every response, re-pitch where you are: give a little bit of context first (w
 
 This is a per-message check, not a one-time setup. Every single message to the user — status updates, question rounds, detour answers, final reports — follows it, for the whole session, no matter how long the conversation gets. Before sending, re-read your draft as the user who just walked back in: if the first sentence does not tell them where things stand, rewrite it.
 
+Dense findings need translation, not just presence. When you report technical results, write for a reader who knows the project but did not watch you work: define every symbol, abbreviation, and scheme name at first use in that message (even ones the plan file defines), and pair each key number with its plain meaning — "12.7 nats off at the first token" says nothing by itself; "the model starts every reply confidently predicting the wrong token" is the finding. Open any long report with a few plain sentences answering three questions: what did you do, what did you find, what should the user do about it. The test: if the user would have to ask "wait, what did you actually do?", the message failed — rewrite it before sending, because the follow-up question costs more than the rewrite.
+
 ## Phase 1 — define
 
 The user gives an oral, vague description of what they want, possibly with links (papers, repos, docs).

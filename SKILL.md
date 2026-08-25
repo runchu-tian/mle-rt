@@ -68,6 +68,15 @@ Every time you modify the plan file — folding in Phase 2 answers, Phase 3 refi
 
 The one thing a dead end leaves behind is a pitfall entry: a short "avoid X because Y" line (keep a `## Pitfalls` section for these) so a handoff agent does not re-walk the dead end. Everything else that no longer serves the current plan is context burden — these files are read whole by future agents, and every stale paragraph dilutes the real plan. The same rule applies to the report file.
 
+## The user approves what goes in
+
+The plan and report files carry the project's agreements, so nothing enters them that the user has not approved. The Phase 1 raw draft is the one exception — it exists precisely to be corrected. After that:
+
+- Decisions the user settled in chat are already approved — fold them in directly.
+- Everything else — facts you discovered, conclusions you drew, deliverable or requirement changes, pitfall entries, report content — **propose before writing**: show the exact content (or a faithful summary) in your message, typically bundled into the next question round as "proposed edits", and write it only after the user says yes. Never treat silence as approval.
+
+This costs one round-trip per batch and buys the property the whole skill is built on: a handoff agent can trust every line of these files as user-endorsed, not agent-assumed.
+
 ## Self-containedness of plan.md and report.md
 
 Both files must stand alone for a future agent (or human) with zero chat context:
